@@ -22,10 +22,9 @@ function handleSubmission(event) {
     const taskDeadline = document.getElementById('taskDeadline').value;
 
     // TODO: Validate input fields
-    if (taskName == null || taskDeadline == null) {alert('Task name and deadline are required');}
-
+    if (taskName == "" || taskDeadline == "") {alert('Task name and deadline are required');}
     // TODO: Update the tasks array
-    tasks.push({name:taskName, description:taskDescription, deadline:taskDeadline})
+    else {tasks.push({name:taskName, description:taskDescription, deadline:taskDeadline});}
     render();
 }
 
